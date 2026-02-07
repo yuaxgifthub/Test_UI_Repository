@@ -5507,6 +5507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543229929}
   - component: {fileID: 1543229931}
+  - component: {fileID: 1543229932}
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -5549,6 +5550,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
+--- !u!114 &1543229932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543229928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c874f110a81843aa88582fc8c8ca7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1570972761
 GameObject:
   m_ObjectHideFlags: 0
