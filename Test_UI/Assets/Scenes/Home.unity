@@ -741,6 +741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog: {fileID: 216457640}
+  balloon: {fileID: 0}
 --- !u!1 &235738581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2962,6 +2963,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7274556741184325182, guid: 7a9da8c494f0b41f38a8003479a84eb9, type: 3}
+      propertyPath: balloon
+      value: 
+      objectReference: {fileID: 2103294020}
     - target: {fileID: 7772386301380055626, guid: 7a9da8c494f0b41f38a8003479a84eb9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2

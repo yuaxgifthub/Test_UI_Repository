@@ -2,22 +2,23 @@ using UnityEngine;
 
 public class DialogManager : MonoBehaviour
 {
-    // ‚±‚±‚ÉƒqƒGƒ‰ƒ‹ƒL[‚É‚ ‚éƒ_ƒCƒAƒƒO‚ğ•R•t‚¯‚Ü‚·
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Éƒqï¿½Gï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½[ï¿½É‚ï¿½ï¿½ï¿½_ï¿½Cï¿½Aï¿½ï¿½ï¿½Oï¿½ï¿½Rï¿½tï¿½ï¿½ï¿½Ü‚ï¿½
     public GameObject dialog;
+    public GameObject balloon;
 
-    // Animator‚ğ‘€ì‚·‚é‚½‚ß‚Ì•Ï”
+    // Animatorï¿½ğ‘€ì‚·ï¿½é‚½ï¿½ß‚Ì•Ïï¿½
     private Animator anim;
 
     void Start()
     {
-        // Å‰‚ÉAnimator‚ğæ“¾‚µ‚Ä‚¨‚«‚Ü‚·
+        // ï¿½Åï¿½ï¿½ï¿½Animatorï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½
         if (dialog != null)
         {
             anim = dialog.GetComponent<Animator>();
         }
     }
 
-    // ƒ_ƒCƒAƒƒO‚ğŠJ‚­ˆ—
+    // ï¿½_ï¿½Cï¿½Aï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void OpenDialog()
     {
         if (dialog != null)
@@ -26,12 +27,12 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    // ƒ_ƒCƒAƒƒO‚ğ•Â‚¶‚éƒAƒjƒ‚ğŠJn‚·‚éˆ—
+    // ï¿½_ï¿½Cï¿½Aï¿½ï¿½ï¿½Oï¿½ï¿½Â‚ï¿½ï¿½ï¿½Aï¿½jï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½nï¿½ï¿½ï¿½éˆï¿½ï¿½
     public void CloseDialog()
     {
         if (anim != null)
         {
-            // ƒAƒjƒ[ƒ^[‚ÌuClosevƒgƒŠƒK[‚ğˆø‚­
+            // ï¿½Aï¿½jï¿½ï¿½ï¿½[ï¿½^ï¿½[ï¿½ÌuCloseï¿½vï¿½gï¿½ï¿½ï¿½Kï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             anim.SetTrigger("Close");
         }
         else
@@ -41,9 +42,14 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    // ƒAƒjƒ[ƒVƒ‡ƒ“‚ÌÅŒã‚ÉuƒAƒjƒ[ƒVƒ‡ƒ“ƒCƒxƒ“ƒgv‚ÅŒÄ‚Ño‚·ŠÖ”
+    // ï¿½Aï¿½jï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ÌÅŒï¿½Éuï¿½Aï¿½jï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½xï¿½ï¿½ï¿½gï¿½vï¿½ÅŒÄ‚Ñoï¿½ï¿½ï¿½Öï¿½
     public void OnCloseAnimationComplete()
     {
         dialog.SetActive(false);
+        // â˜…è¿½åŠ ï¼šãƒ•ã‚­ãƒ€ã‚·ã‚‚éè¡¨ç¤ºã«ã™ã‚‹
+        if (balloon != null)
+        {
+            balloon.SetActive(false);
+        }
     }
 }
