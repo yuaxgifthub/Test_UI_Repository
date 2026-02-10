@@ -34,11 +34,11 @@ public class DialogManager : MonoBehaviour
         {
             // �A�j���[�^�[�́uClose�v�g���K�[������
             anim.SetTrigger("Close");
-        }
-        else
+            // ★追加：フキダシも非表示にする
+        if (balloon != null)
         {
-            
-            
+            balloon.SetActive(false);
+        }
         }
     }
 
@@ -46,10 +46,6 @@ public class DialogManager : MonoBehaviour
     public void OnCloseAnimationComplete()
     {
         dialog.SetActive(false);
-        // ★追加：フキダシも非表示にする
-        if (balloon != null)
-        {
-            balloon.SetActive(false);
-        }
+        
     }
 }
